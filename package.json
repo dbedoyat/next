@@ -1,0 +1,42 @@
+{
+  "name": "dbedoyat",
+  "version": "1.0.0",
+  "description": "My own portfolio",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
+    "next": "^8.1.0",
+    "next-routes": "^1.4.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-google-font-loader": "^1.0.5",
+    "react-slick": "^0.24.0",
+    "reactstrap": "^8.0.0",
+    "slick-carousel": "^1.8.1",
+    "wpapi": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build && next export",
+    "start": "NODE_ENV=production node server.js",
+    "now-build": "next build && next export -o dist"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "wordpress",
+    "router",
+    "spa",
+    "ssr"
+  ],
+  "author": {
+    "name": "David Bedoya",
+    "email": "dbedoyat@gmail.com"
+  },
+  "license": "MIT"
+}

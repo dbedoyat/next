@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "name": "dbedoyat",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build" }
+    ],
+    "routes": [{ "src" : "/blogpost", "dest": "/blog/$slug" }]
+
+}
