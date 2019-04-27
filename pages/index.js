@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 export default class Home extends Component {
     render() {
-        let { html, attributes: { title, cats } } = content;
+        let { html, attributes: { title, portafolio} } = content;
         return (
             <Fragment> 
             <head>
@@ -14,10 +14,11 @@ export default class Home extends Component {
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
                 <ul>
-                    {cats.map((cat, k) => (
+                    {portafolio.map((item, k) => (
                         <li key={k}>
-                            <h2>{cat.name}</h2>
-                            <p>{cat.description}</p>
+                            <img src={item.image} alt={item.name}/>
+                            <h2>{item.name}</h2>
+                            <p>{item.description}</p>
                         </li>
                     ))}
                 </ul>
