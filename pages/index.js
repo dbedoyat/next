@@ -4,22 +4,20 @@ import Head from 'next/head'
 
 export default class Home extends Component {
     render() {
-        let { html, attributes: { title, Portafolio } } = content;
+        let { html, attributes: { title, cats } } = content;
         return (
             <Fragment> 
-            <Head>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-            </Head>
+            <head>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+            </head>
             <article>
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
                 <ul>
-                    {Portafolio.map((Portafolio, k) => (
+                    {cats.map((cat, k) => (
                         <li key={k}>
-                            <img src={Portafolio.image} alt={Portafolio.name}/>
-                            <h2>{Portafolio.name}</h2>
-                            <p>{Portafolio.description}</p>
-                            <span>{Portafolio.tags}</span>
+                            <h2>{cat.name}</h2>
+                            <p>{cat.description}</p>
                         </li>
                     ))}
                 </ul>
