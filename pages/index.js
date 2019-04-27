@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import content from '../content/home.md';
 import Head from 'next/head'
 
@@ -6,7 +6,7 @@ export default class Home extends Component {
     render() {
         let { html, attributes: { title, cats } } = content;
         return (
-
+            <Fragment> 
             <head>
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </head>
@@ -22,6 +22,7 @@ export default class Home extends Component {
                     ))}
                 </ul>
             </article>
+            </Fragment>  
         )
     }
 }
