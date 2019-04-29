@@ -8,13 +8,13 @@ import '../theme.css';
 
     
 
-export default ({ children, title = 'Ssangyong Colombia' }) => (
+export default ({ children, title = 'dbedoyat' }) => (
     <div>
 
     <GoogleFontLoader
             fonts={[
             {
-                font: 'Nunito Sans',
+                font: 'Nunito',
                 weights: [400, 600, 700],
             }
             ]}
@@ -24,11 +24,10 @@ export default ({ children, title = 'Ssangyong Colombia' }) => (
         <Head>
             <title>{title}</title>
             <meta charSet='utf-8' />
-            <meta name="keywords" itemProp="keywords" content="ssangyong,camionetas,SUV,camioneta,TIVOLI,Korando C,Actyon,Actyon Sports,Rexton,Rodius,carros,vehículos,venta,repuestos,4x4,4x2,sanyon" />
-            <meta name="description" itemProp="description" content="Bienvenidos a SsangYong Motor Colombia. Conoce nuestras camionetas y escoge la que mejor se adapte a tu estilo de vida" />
+            <meta name="keywords" itemProp="keywords" content="design,develop,react,nodejs,web,html,css,jquery,wordpress,diseño,responsive,mobile" />
+            <meta name="description" itemProp="description" content="my own page" />
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             <meta name="theme-color" content="#111111" />
-            <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
             <link rel="shortcut icon" type="image/png" href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/xGJ4XukfAJKAPdHEBn0PZd87ZD0tRng595yu2SHQgDM/favicon-32x32.png" />
         </Head>
      
