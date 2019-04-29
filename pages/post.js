@@ -34,14 +34,14 @@ class BlogPost extends React.Component {
 
         <div id="hero-post">
           	
-			<div className="container-fluid fix">
+			<div id="post" className="container-fluid fix">
 				<div className="row">
 					<div className="col-12">
 							<h1 className="hero-title" dangerouslySetInnerHTML={{ __html: this.props.title.rendered }} />
 
 					</div>
 				</div>
-			</div>
+			 </div>
 			<img src={this.props._embedded['wp:featuredmedia'][0].source_url}
 			alt={this.props._embedded['wp:featuredmedia'][0].alt_text} className="hero-img" />
 		</div>
@@ -51,7 +51,7 @@ class BlogPost extends React.Component {
 				<div className="col-12">
        
 					<p>{this.props.date}</p>
-					<p>By {this.props._embedded.author[0].name}</p>
+					<p>Escrito por: {this.props._embedded.author[0].name}</p>
 					{
 					!!this.props._embedded['wp:featuredmedia'] &&
 							<div className="img-post text-center  mt-4 mb-4">

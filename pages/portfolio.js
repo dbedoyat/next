@@ -12,12 +12,9 @@ class Index extends Component {
         const res = await fetch(`https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?_embed=true`)
         const portfolio = await res.json();
         console.log(`Home > Portfolio: ${portfolio.length}`);
-
         return { portfolio }
-
+        
     }
-
-
 
     render() {
         const { portfolio } = this.props;
@@ -37,8 +34,7 @@ class Index extends Component {
                                             slug: post.slug,
                                         },
                                     }}
-                                    as={`/post/${post.slug}`}
-                                >
+                                    as={`/post/${post.slug}`}>
                                     <a>
                                         <img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
                                         <h1>

@@ -47,7 +47,7 @@ export default ({ children, title = 'dbedoyat' }) => (
                 top: 0;
                 position: fixed;
                 height:60px;
-                font-family: "Nunito Sans", sans-serif;
+                font-family: "Nunito", sans-serif;
                 z-index: 100;
             }
             header a{
