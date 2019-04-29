@@ -28,7 +28,7 @@ module.exports = withCSS({
         const pages = postList.reduce(
             (pages, post) =>
                 Object.assign({}, pages, {
-                    [`/post/${post.slug}`]: {
+                    [`/portfolio/${post.slug}`]: {
                         page: '/post',
                         query: { slug: post.slug }
                     }
@@ -39,9 +39,8 @@ module.exports = withCSS({
         // combine the map of post pages with the home
         return Object.assign({}, pages, {
             '/': { page: '/' },
-            '/concesionarios': { page: '/concesionarios' },
-            '/contacto': { page: '/contacto' },
-            '/camionetas': { page: '/camionetas' }
+            '/contact': { page: '/contact' },
+            '/portfolio': { page: '/portfolio' },
         })
 
 
