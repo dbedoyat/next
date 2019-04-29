@@ -1,0 +1,146 @@
+/* Custom Bootstrap Theme by Processoft
+*/
+
+
+:root {
+    --primary:#001689;
+    --secondary:#07a9f4;
+    --success: #28a745;
+    --danger: #dc3545;
+    --dark:#646464;
+    --dark2:#333;
+}     
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-rendering: optimizeLegibility;
+    background-color:#fff;
+    margin: 0;
+    color:#404040;
+    font-size: 16px;
+    height: 2000px;
+}
+
+.page-content {
+    margin-top: 60px;
+}
+
+p{
+    font-size: 18px;
+} 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color:#303030;
+}
+.container-fluid.fix{
+    max-width: 1140px;
+}
+
+.card .marca {
+    filter: brightness(0.3);
+    -webkit-filter: brightness(0.3);
+    margin: 0 auto !important;
+    max-width: 180px;
+    height: 29px !important;
+}
+
+/** Buttons **/
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Color iconos */
+
+.caracteristicas li > svg {
+    left: 0px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    stroke: var(--secondary);
+    background: #cbeeff;
+    padding: 6px;
+    border-radius: 10px;
+}
+/* Ajustes globales */
+
+header li > .dropdown{
+    color:#e8e8e8;
+    padding: 4px 14px;
+    font-weight: 600;
+    font-size:16px;
+    display: block;
+}
+
+/* Clases modificadas para wordpress */
+
+.img-auto img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Slick Slider - Global */
+
+button.slick-arrow{
+    z-index: 20;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    background: #000;
+}
+.slick-prev {
+    left: 10px !important; 
+}
+.slick-next {
+    right: 10px !important;
+}
+/** Maps - temp class **/
+
+.control-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 320px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    padding: 12px 24px;
+    margin: 20px;
+    font-size: 13px;
+    line-height: 2;
+    color: #6b6b76;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #08f;
+}
+#nprogress .spinner{
+    display: none !important;
+}
+
+/* Portfolio  fix */
+
+#post p{
+    font-size:24px;
+}
