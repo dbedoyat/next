@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
 
 
-
 class Index extends Component {
 
 	static async getInitialProps() {
@@ -15,12 +14,8 @@ class Index extends Component {
 		console.log(`Home > Portfolio: ${portfolio.length}`);
 		
 		return { portfolio }
-
-
-
 	
 }
-
 
 
 	render() {

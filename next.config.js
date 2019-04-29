@@ -20,7 +20,7 @@ module.exports = withCSS({
 
         // we fetch our list of posts, this allow us to dynamically generate the exported pages
         const response = await fetch(
-            `https://testpsf.000webhostapp.com/wp-json/wp/v2/posts?_embed=true&categories=1`
+            `https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?_embed=true&categories=1`
         )
         const postList = await response.json()
 

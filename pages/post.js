@@ -10,9 +10,7 @@ class BlogPost extends React.Component {
   static async getInitialProps({ query }) {
 	  
     const slug = query.slug
-    const response = await fetch(
-      `https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
-    )
+    const response = await fetch(`https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
     const post = await response.json();
     console.log(`Leyendo: ${post[0].title.rendered}`);
 	return post[0]
@@ -21,11 +19,6 @@ class BlogPost extends React.Component {
   }
 
   render() {
-
- 
-
-
-
     return (
       <Layout>
         <Head>
