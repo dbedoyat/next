@@ -48,7 +48,7 @@ class Index extends Component {
 											slug: post.slug,
 										},
 									}}
-									as={`/portfolio/${post.slug}`}
+									as={`/post/${post.slug}`}
 								>
 									<a>
 										<img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
