@@ -34,7 +34,7 @@ class BlogPost extends React.Component {
 
         <div id="hero-post">
           	
-			<div id="post" className="container-fluid fix">
+			<div className="container-fluid fix post">
 				<div className="row">
 					<div className="col-12">
 							<h1 className="hero-title" dangerouslySetInnerHTML={{ __html: this.props.title.rendered }} />
@@ -46,7 +46,7 @@ class BlogPost extends React.Component {
 			alt={this.props._embedded['wp:featuredmedia'][0].alt_text} className="hero-img" />
 		</div>
 
-		<div id="post" className="container-fluid">
+			<div  className="container-fluid post">
 			<div className="row">
 				<div className="col-12">
        
@@ -89,7 +89,7 @@ class BlogPost extends React.Component {
 				top: -60px;
 				display: block;
 			}
-			#post.container-fluid{
+			.container-fluid.post{
 				max-width:720px;
 			}
 			

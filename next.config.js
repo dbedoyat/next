@@ -1,5 +1,6 @@
 // next.config.js
 const fetch = require('isomorphic-unfetch')
+const withManifest = require('next-manifest')
 
 const withCSS = require('@zeit/next-css')
 module.exports = withCSS({

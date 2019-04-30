@@ -27,7 +27,8 @@ export default ({ children, title = 'dbedoyat' }) => (
             <meta name="keywords" itemProp="keywords" content="design,develop,react,nodejs,web,html,css,jquery,wordpress,diseño,responsive,mobile" />
             <meta name="description" itemProp="description" content="my own page" />
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-            <meta name="theme-color" content="#111111" />
+            <meta name="theme-color" content="#000000" />
+            <link rel="manifest" href="/static/manifest/manifest.json" />
             <link rel="shortcut icon" type="image/png" href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/xGJ4XukfAJKAPdHEBn0PZd87ZD0tRng595yu2SHQgDM/favicon-32x32.png" />
         </Head>
      
