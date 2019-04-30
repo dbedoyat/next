@@ -148,5 +148,10 @@ button.slick-arrow{
 /* Portfolio  fix */
 
 #post p{
-    font-size:24px;
+    font-size:20px;
+}
+
+.post figure img{
+    max-width: 100%;
+    height: auto;
 }
