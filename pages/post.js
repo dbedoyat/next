@@ -14,8 +14,7 @@ class BlogPost extends React.Component {
     const post = await response.json();
     console.log(`Leyendo: ${post[0].title.rendered}`);
 	return post[0]
-	
-	
+
   }
 
   render() {
@@ -70,8 +69,7 @@ class BlogPost extends React.Component {
              	width: 100%;
               	height: 200px;
 				overflow:hidden;	
-         	}
-			 			
+         	}		
 			#hero-post .hero-img {
              	width: 100%;
 				 top:50%;

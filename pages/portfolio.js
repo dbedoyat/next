@@ -3,19 +3,14 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
 
-
-
 class Index extends Component {
 
     static async getInitialProps() {
-
         const res = await fetch(`https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?_embed=true`)
         const portfolio = await res.json();
         console.log(`Home > Portfolio: ${portfolio.length}`);
         return { portfolio }
-        
     }
-
     render() {
         const { portfolio } = this.props;
 
