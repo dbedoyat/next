@@ -1,13 +1,15 @@
 import { Form, Field } from 'react-final-form'
-
+import 'isomorphic-fetch'
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const onSubmit = async values => {
     await sleep(300)
     window.alert(JSON.stringify(values, 0, 2))
 }
+
+
 class Formulario extends React.Component {
-  
+
     render() {
         return (
             <Form
@@ -18,7 +20,7 @@ class Formulario extends React.Component {
                         <div>
                             <label>First Name</label>
                             <Field
-                                name="firstName"
+                                name="name"
                                 component="input"
                                 type="text"
                                 placeholder="First Name"
@@ -27,7 +29,7 @@ class Formulario extends React.Component {
                         <div>
                             <label>Last Name</label>
                             <Field
-                                name="lastName"
+                                name="email"
                                 component="input"
                                 type="email"
                                 placeholder="tucorreo@correo.com"
@@ -36,43 +38,40 @@ class Formulario extends React.Component {
                         <div>
                             <label>Teléfono / Celular</label>
                             <Field
-                                name="telefono"
+                                name="phone"
                                 component="input"
                                 type="number"
                                 placeholder=""
                             />
                         </div>
 
-
                         <div>
-                            <label>Favorite Color</label>
-                            <Field name="favoriteColor" component="select">
-                                <option />
-                                <option value="#ff0000">❤️ Red</option>
-                                <option value="#00ff00">💚 Green</option>
-                                <option value="#0000ff">💙 Blue</option>
-                            </Field>
-                        </div>
-
-                        <div>
-                            <Field name="aceptaTerminos" component="input" type="checkbox" />
+                            <Field name="terms" component="input" type="checkbox" />
                             <label>Acepto los términos y condiciones de Ssangyong Motor Colombia</label>
                            
                         </div>
 
+                        <div>
+                            <label>Message</label>
+                            <Field name="text" component="textarea" placeholder="Message" />
+                        </div>
+
 
                         <div className="buttons">
-                            <button type="submit" disabled={submitting || pristine}>
+                            <button type="submit"
+                                
+                            >
                                 Enviar
-            </button>
+                            </button>
 
                         </div>
 
 
                         <pre>{JSON.stringify(values, 0, 2)}</pre>
+    
                         <style jsx>{`
                                 pre{
-                                    color:#fff;
+                                    color:#000;
                                 }
                         
                         `}</style>
