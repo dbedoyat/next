@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 
 
-class BlogPost extends React.Component {
+class BlogPost extends Component {
   static async getInitialProps({ query }) {
 	  
     const slug = query.slug
@@ -24,8 +24,6 @@ class BlogPost extends React.Component {
           <title>{this.props.title.rendered}</title>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-
-
           <meta property="og:title" content={this.props.title.rendered} />
           <meta property="og:type" content="website" />
           <meta property="og:image" content={this.props._embedded['wp:featuredmedia'][0].source_url} />
@@ -39,7 +37,7 @@ class BlogPost extends React.Component {
 							<h1 className="hero-title" dangerouslySetInnerHTML={{ __html: this.props.title.rendered }} />
 
 					</div>
-				</div>
+				</div> 
 			 </div>
 			<img src={this.props._embedded['wp:featuredmedia'][0].source_url}
 			alt={this.props._embedded['wp:featuredmedia'][0].alt_text} className="hero-img" />
@@ -71,7 +69,7 @@ class BlogPost extends React.Component {
 				overflow:hidden;	
          	}		
 			#hero-post .hero-img {
-             	width: 100%;
+          width: 100%;
 				 top:50%;
 
          	}
