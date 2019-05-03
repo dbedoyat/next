@@ -35,7 +35,8 @@ class Index extends Component {
 						<h2>Showcase</h2>
 					</div>
 						{portfolio.map(post => (
-							<div className="col-md-4 col-sm-4 col-12" key={post.id}>
+							<div className="col-md-4 col-sm-4 col-12 " key={post.id}>
+								<div className="card">
 								<Link
 									href={{
 										pathname: '/post',
@@ -46,12 +47,18 @@ class Index extends Component {
 									as={`/post/${post.slug}`}
 								>
 									<a>
-										<img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
-										<h1>
+										<div className="img-content">
+											<img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
+										</div>
+										<h3 className="pl-3 pr-3 mt-2 mb-2">
 											{post.title.rendered}
-										</h1>
+										</h3>
+										
+
+										<div className="description pl-3 pr-3" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
 									</a>
 								</Link>
+								</div>
 							</div>
 						))
 						}
@@ -59,6 +66,10 @@ class Index extends Component {
 				</div>
 
 				<style jsx>{`
+
+					body{
+						background:#F8F8F8 !important;
+					}
 						
 					#hero{
 						width:100%;
@@ -66,6 +77,26 @@ class Index extends Component {
 						background:#ddd;
 						margin-bottom:40px;
 					}
+					.card {
+						box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+						border: 0;
+						transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+						transition-delay: .1s;
+						border-radius: 4px;
+						transform: translateZ(0);
+						background-color: #fff;
+						overflow: hidden;
+						height: 100%;
+						text-decoration:none;
+					}
+
+					.card h3 {
+						color: #303030;
+						font-size: 24px;
+						font-weight:600;
+					}
+
+					
                 
                 `}</style>
 

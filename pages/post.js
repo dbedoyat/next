@@ -68,22 +68,33 @@ class BlogPost extends Component {
               	height: 200px;
 				overflow:hidden;	
          	}		
-			#hero-post .hero-img {
-          width: 100%;
-				 top:50%;
-
-         	}
-			#hero-post .hero-title {
-				z-index: 10;
-				position: absolute;
-				top: 180px;
-				left: inherit;
+		#hero-post .hero-img {
+					width: 110%;
+					margin-top: -5%;
+					filter: blur(35px);
+					margin-left: -5%;
+					transform: translateY(-50%);
+			}
+			#hero-post .hero-title  {
+					z-index: 10;
+					position: absolute;
+					top: 180px;
+					left: inherit;
+					color: #fff;
 			}
 
 			#hero-post .container-fluid{
 				position: relative;
 				top: -60px;
 				display: block;
+			}
+			div#hero-post:before {
+					content: '';
+					width: 100%;
+					height: 200px;
+					background: rgba(0, 0, 0, 0.5);
+					position: absolute;
+					z-index: 1;
 			}
 			.container-fluid.post{
 				max-width:720px;

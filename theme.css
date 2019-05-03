@@ -3,8 +3,8 @@
 
 
 :root {
-    --primary:#00d2d3;
-    --secondary:#01a3a4;
+    --primary:#9575CD;
+    --secondary:#673ab7;
     --success: #28a745;
     --danger: #dc3545;
     --dark:#646464;
@@ -28,7 +28,9 @@ body{
 .page-content {
     margin-top: 60px;
 }
-
+a:hover{
+    text-decoration:none;
+}
 p{
     font-size: 18px;
 } 
@@ -154,4 +156,10 @@ button.slick-arrow{
 .post figure img{
     max-width: 100%;
     height: auto;
+}
+
+.card .description > p{
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
 }
