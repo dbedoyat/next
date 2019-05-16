@@ -8,14 +8,12 @@ import Layout from '../components/Layout';
 
 class BlogPost extends Component {
   static async getInitialProps({ query }) {
-	  
     const slug = query.slug
     const response = await fetch(`https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
     const post = await response.json();
     console.log(`Leyendo: ${post[0].title.rendered}`);
-	return post[0]
-
-  }
+		return post[0]
+	}
 
   render() {
     return (

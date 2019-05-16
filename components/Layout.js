@@ -1,6 +1,7 @@
 
 import Head from 'next/head';
 import Header from './Header';
+import Footer from './Footer';
 import GoogleFontLoader from 'react-google-font-loader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../theme.css';
@@ -8,13 +9,17 @@ import '../theme.css';
 
     
 
-export default ({ children, title = 'dbedoyat' }) => (
+export default ({ children, title = 'David Bedoya - UI Designer' }) => (
     <div>
 
     <GoogleFontLoader
             fonts={[
             {
-                font: 'Nunito',
+                font: 'Roboto Slab',
+                weights: [400, 700],
+            },
+            {
+                font: 'Open Sans',
                 weights: [400, 600, 700],
             }
             ]}
@@ -37,7 +42,7 @@ export default ({ children, title = 'dbedoyat' }) => (
             
             {children}
         </div>
-        
+        <Footer />
         <style jsx>{`
             header{
                 background: #fff;
@@ -47,7 +52,7 @@ export default ({ children, title = 'dbedoyat' }) => (
                 top: 0;
                 position: fixed;
                 height:60px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Open Sans", sans-serif;
                 z-index: 100;
             }
             header a{
@@ -68,7 +73,7 @@ export default ({ children, title = 'dbedoyat' }) => (
             .page-content {
                 margin-top: 60px;
                 min-height:600px;
-                font-family: "Nunito", sans-serif;
+                 font-family: "Open Sans", sans-serif;
             }
 
              footer {
@@ -76,7 +81,7 @@ export default ({ children, title = 'dbedoyat' }) => (
                 padding: 25px;
                 text-align: center;
                 color: #000;
-                font-family: "Nunito", sans-serif;
+                font-family: "Open Sans", sans-serif;
             }
          
            

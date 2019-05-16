@@ -21,7 +21,7 @@ class Index extends Component {
                 <div className="container-fluid fix">
                     <div className="row">
                         {portfolio.map(post => (
-                            <div className="col-md-4 col-sm-4 col-12" key={post.id}>
+                            <div className="col-md-4 col-sm-4 col-12 mb-4" key={post.id}>
                                 <Link
                                     href={{
                                         pathname: '/post',
@@ -32,9 +32,9 @@ class Index extends Component {
                                     as={`/post/${post.slug}`}>
                                     <a>
                                         <img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
-                                        <h1>
+                                        <h4 className="pl-3 pr-3 mt-2 mb-2">
                                             {post.title.rendered}
-                                        </h1>
+                                        </h4>
                                     </a>
                                 </Link>
                             </div>

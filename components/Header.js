@@ -1,12 +1,27 @@
+import React, { Component } from 'react'
 import Link from './Link';
 
-export default class Header extends React.Component {
+class Header extends Component {
+
+    state = { showMenu: false }
+
+    toggleMenu = () => {
+        this.setState({
+            showMenu: !this.state.showMenu
+        })
+    }
 
     render() {
+        const menutoggle = this.state.showMenu ? 'show' : 'hide';
         return (
-
+            
             <header>
                 <div className="container-fluid fix">
+                    <button className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
+                        <span className="line1"></span>
+                        <span className="line2"></span>
+                        <span className="line3"></span>
+                    </button>
                     <div className="content-logo">
                         <Link activeClassName='active' href="/">
                             <a href="">
@@ -14,16 +29,21 @@ export default class Header extends React.Component {
                             </a>
                         </Link>
                     </div>
-                    <nav>
+                    <nav className={`menu ${menutoggle}`}>
                         <ul>
                             <li>
                                 <Link activeClassName='active' href="/portfolio">
-                                    <a href="">Link1</a>
+                                    <a href="">Portfolio</a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link activeClassName='active' href="/about">
+                                    <a href="">About</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link activeClassName='active' href="/contact">
-                                    <a href="">Link2</a>
+                                    <a href="">Contact</a>
                                 </Link>
                             </li>
                         </ul>
@@ -105,6 +125,12 @@ export default class Header extends React.Component {
                         left: inherit;
                         top: 5px;
                         height: 20px;
+
+                    }
+
+                    .content-logo h1{
+
+                        color:var(--secondary);
                     }
                     nav{
                         width:calc(100% - 360px);
@@ -112,14 +138,151 @@ export default class Header extends React.Component {
                         padding: 13px 15px;
                         
                     }
-                    nav.tiendaVirtual{
-                        width:160px;
-                        float:left;
-                        text-align: right;
-                        padding: 11px 15px;
-                        
+                    .nav-btn{
+                        display:none;
+                    }
+
+                    @media only screen and (max-width : 768px) {
+
+                    .logo {
+                        position: absolute;
+                        z-index: 10;
+                        width: 60px;
+                        top: 10px;
+                        left: 15px;
+                    }
+
+                    nav.menu {
+                       position: fixed;
+                        z-index: 1000;
+                        width: 400px;
+                        height: 400px;
+                        padding: 10px;
+                        right: -175px;
+                        top: -175px;
+                        padding-top: 210px;
+                        padding-left: 20px;
+                        padding-right: 190px;
+                        border-radius: 50%;
+                        background: var(--secondary);
+
+                    }
+                    nav.menu li{
+                       display: inline-block;
+                        margin: 0px;
+                        width: 100%;
+                    }
+
+                    nav.menu.show{
+                        transition: all ease .2s;
+                        transform: scale(1);
+                    }
+
+                     nav.menu.hide{
+                        transition: all ease .2s;
+                        transform: scale(0);
+                    }
+
+                    .nav-btn{
+                        position: fixed;
+                        right: 0;
+                        width: 50px;
+                        top: 0px;
+                        height: 50px;
+                        z-index: 1100;
+                        background: transparent;
+                        padding: 12px;
+                        border: 0;
+                        display:block;
+                    }
+
+
+            
+
+                    .nav-btn span{
+                        background: var(--secondary);
+                        width: 28px;
+                        height: 3px;
+                        border-radius: 0px;
+                        position: absolute;
+                        left: 11px;
+                        webkit-transition: all ease-in-out .3s;
+                        -moz-transition: all ease-in-out .3s;
+                        -ms-transition: all ease-in-out .3s;
+                        -o-transition: all ease-in-out .3s;
+                        transition: all ease-in-out .3s;
+                    }
+
+                    .nav-btn.show span{
+                        background: #fff;
+                    }
+
+                    /* Menu Hamburger state */
+
+                    .nav-btn span.line1{
+                        top: 13px;
+                    }
+                    .nav-btn span.line2{  
+                        top: 24px;
+                        width: 16px;
+                    }
+                    .nav-btn span.line3{
+                        top: 35px;
+                    }
+
+                    
+                    
+                    /* Menu Close state */
+
+                    .nav-btn.show span.line1{
+                        -webkit-transform: rotate(225deg);
+                        -moz-transform: rotate(225deg);
+                        -ms-transform: rotate(225deg);
+                        -o-transform: rotate(225deg);
+                        transform: rotate(225deg);
+                        top: 24px !important;
+                    }
+                   .nav-btn.show span.line2{
+                        width: 0px !important;
+                    }
+                   .nav-btn.show span.line3{
+                        -webkit-transform: rotate(-225deg);
+                        -moz-transform: rotate(-225deg);
+                        -ms-transform: rotate(-225deg);
+                        -o-transform: rotate(-225deg);
+                        transform: rotate(-225deg);
+                        top: 24px !important;
+                    }
+                    nav.menu li a{
+                        color: #fff;
+                        font-size: 20px;
+                    }
+
+                    nav.menu li{
+                        display:inline;
+                    }
+
+                    nav.menu li:nth-child(1){
                         
                     }
+                     
+                    nav.menu li:nth-child(2){
+                        margin-top:10px;
+                        margin-left:20%;
+                    }
+
+                    nav.menu li:nth-child(3){
+                        margin-top:10px;
+                        margin-left:40%;
+                    }
+
+                    .content-logo h1{
+                        font-size:30px;
+                        color:var(--secondary);
+                    }
+                  
+                }    
+
                 
                 `}</style>
 
@@ -127,3 +290,6 @@ export default class Header extends React.Component {
         );
     }
 }
+
+
+export default Header;
