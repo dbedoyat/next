@@ -66,11 +66,13 @@ class Footer extends Component {
 
                 }
 
-                footer.social{
-                    display:inline;
-                    margin:10px;
-                    width:auto;
+                footer .social {
+                    display: inline-flex;
+                    margin: 5px;
+                    width: auto;
                 }
+
+
 
       
 

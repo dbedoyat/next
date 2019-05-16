@@ -44,9 +44,6 @@ class BlogPost extends Component {
 			<div  className="container-fluid post">
 			<div className="row">
 				<div className="col-12">
-       
-					<p>{this.props.date}</p>
-					<p>Escrito por: {this.props._embedded.author[0].name}</p>
 					{
 					!!this.props._embedded['wp:featuredmedia'] &&
 							<div className="img-post text-center  mt-4 mb-4">
@@ -62,14 +59,14 @@ class BlogPost extends Component {
         <style jsx>{`
 						
 			#hero-post {
-             	width: 100%;
-              	height: 200px;
-				overflow:hidden;	
+          	width: 100%;
+            height: 200px;
+						overflow:hidden;	
          	}		
 		#hero-post .hero-img {
 					width: 110%;
 					margin-top: -5%;
-					filter: blur(35px);
+					filter: blur(25px);
 					margin-left: -5%;
 					transform: translateY(-50%);
 			}
@@ -101,7 +98,13 @@ class BlogPost extends Component {
 			.img-post img{
 				margin:0 auto;
 			}
-								
+
+      @media only screen and (max-width : 768px) {
+					#hero-post .hero-img {
+							transform: translateY(0%);
+							filter: blur(5px);
+					}
+				}					
         `}</style>
 
 
