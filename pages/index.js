@@ -31,7 +31,7 @@ class Index extends Component {
 					<div className="row">
 
 					<div className="col-12 text-center mb-5">
-						<h2>Showcase</h2>
+						<h2>Portfolio</h2>
 					</div>
 						{portfolio.map(post => (
 							<div className="col-md-4 col-sm-4 col-12 mb-4" key={post.id}>
@@ -49,8 +49,8 @@ class Index extends Component {
 										<div className="img-content">
 											<img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
 										</div>
-										<h4 className="pl-3 pr-3 mt-2 mb-2">
-											{post.title.rendered}
+										<h4 className="titlePort pl-3 pr-3 mt-2 mb-2"  dangerouslySetInnerHTML={{ __html: post.title.rendered }}>
+										
 										</h4>
 										
 

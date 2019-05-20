@@ -19,10 +19,11 @@ class BlogPost extends Component {
     return (
       <Layout>
         <Head>
-          <title>{this.props.title.rendered}</title>
+          <title>David Bedoya - {this.props.title.rendered}</title>
           <meta charSet='utf-8' />
+					<meta name="description" itemProp="description" content={`David Bedoya - Portfolio: ${this.props.title.rendered}`}/>
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-          <meta property="og:title" content={this.props.title.rendered} />
+          <meta property="og:title" content={`David Bedoya - Portfolio: ${this.props.title.rendered}`}  />
           <meta property="og:type" content="website" />
           <meta property="og:image" content={this.props._embedded['wp:featuredmedia'][0].source_url} />
         </Head>
@@ -43,15 +44,8 @@ class BlogPost extends Component {
 
 			<div  className="container-fluid post">
 			<div className="row">
-				<div className="col-12">
-					{
-					!!this.props._embedded['wp:featuredmedia'] &&
-							<div className="img-post text-center  mt-4 mb-4">
-						<img className="img-fluid"
-						src={this.props._embedded['wp:featuredmedia'][0].source_url}
-						alt={this.props._embedded['wp:featuredmedia'][0].alt_text}/>
-					</div>
-					}
+				<div className="col-12 mt-5">
+				
 					<div dangerouslySetInnerHTML={{ __html: this.props.content.rendered }} />
 				</div>
 			</div>

@@ -11,13 +11,13 @@ class Footer extends Component {
             <footer>
                 
                 <div className="container-fluid fix">
-                    <div className="row">
+                    <div className="row align-items-center">
                     
                         <div className="col-md-6 col-12">
                             <h3>David Bedoya</h3>
-                            <p>UI Designer</p>
+                            <p>Web Designer</p>
                         </div>
-                        <div className="col-md-6 col-12">
+                        <div className="divSocial col-md-6 col-12">
                             <div className="social">
                             <a href="" target="_blank">
                                 <FaCodepen />
@@ -70,6 +70,10 @@ class Footer extends Component {
                     display: inline-flex;
                     margin: 5px;
                     width: auto;
+                }
+
+                footer .divSocial {
+                    text-align:right;
                 }
 
 

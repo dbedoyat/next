@@ -4,7 +4,7 @@
 
 :root {
     --primary:#9575CD;
-    --secondary:#363757;
+    --secondary:#82bc00;
     --success: #28a745;
     --danger: #dc3545;
     --dark:#646464;
@@ -163,10 +163,14 @@ button.slick-arrow{
     margin: 0 auto;
 }
 
+.card .titlePort{
+    color:var(--primary)
+}
+
 .card .description > p{
-    color: var(--secondary);
-    font-size: 14px;
-    font-weight: 600;
+    color: #404040;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .card {

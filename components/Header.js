@@ -17,7 +17,7 @@ class Header extends Component {
             
             <header>
                 <div className="container-fluid fix">
-                    <button className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
+                    <button role="button" className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
                         <span className="line1"></span>
                         <span className="line2"></span>
                         <span className="line3"></span>
@@ -25,7 +25,7 @@ class Header extends Component {
                     <div className="content-logo">
                         <Link activeClassName='active' href="/">
                             <a href="">
-                                <h1>Logo</h1>                            
+                                <h1>David Bedoya</h1>                            
                             </a>
                         </Link>
                     </div>
@@ -114,7 +114,7 @@ class Header extends Component {
 
 
                     .content-logo{
-                        width: 200px;
+                        width: 220px;
                         float:left;
                         padding: 10px;
                     }
@@ -131,6 +131,8 @@ class Header extends Component {
                     .content-logo h1{
 
                         color:var(--secondary);
+                        font-size: 24px;
+                        padding-top: 5px;
                     }
                     nav{
                         width:calc(100% - 360px);
