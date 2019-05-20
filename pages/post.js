@@ -98,6 +98,12 @@ class BlogPost extends Component {
 							transform: translateY(0%);
 							filter: blur(5px);
 					}
+
+					#hero-post .hero-title  {
+
+						top: 130px;
+						font-size:36px;
+					}
 				}					
         `}</style>
 

@@ -24,7 +24,25 @@ class Index extends Component {
 
 			<Layout>
 				<div id="hero">
-				
+
+					<div className="container-fluid fix">
+						<div className="row align-items-center">
+							<div className="col text-center">
+							<h3 className="mb-5">
+								Web Designer<br />
+								<small>Hello! I'm David Bedoya<br />Enjoy working with Front-End Dev 😊
+								</small>
+							</h3>
+							<div className="link">
+							<Link activeClassName='active' href="/about">
+								<a className="cta" href="">About me ></a>
+							</Link>
+
+							</div>
+							
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div className="container-fluid fix">
@@ -73,9 +91,35 @@ class Index extends Component {
 					#hero{
 						width:100%;
 						height:400px;
-						background:#ddd;
+						background:#DFE4F0;
 						margin-bottom:40px;
 					}
+
+					#hero .container-fluid,
+					#hero .container-fluid .row{
+						height:100%;
+					}
+
+					#hero h3 small{
+						font-size:70%;
+					}
+
+					#hero .cta{
+						background:var(--primary);
+						padding:8px 16px;
+						color:#fff;
+						font-weight:600;
+						transition:all 300ms ease;
+						opacity:1;
+						
+					}
+
+					#hero .cta:hover{
+						transition:all 300ms ease;
+						opacity:0.8;
+						
+					}
+
 
                 `}</style>
 

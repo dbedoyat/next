@@ -25,7 +25,7 @@ class Header extends Component {
                     <div className="content-logo">
                         <Link activeClassName='active' href="/">
                             <a href="">
-                                <h1>David Bedoya</h1>                            
+                                <img className="logo" src="../static/img/icon-dbedoyat.svg" alt=""/>                          
                             </a>
                         </Link>
                     </div>
@@ -58,6 +58,7 @@ class Header extends Component {
                         position: fixed;
                         height:60px;
                         z-index: 100;
+                        box-shadow:var(--shadow);
                     }
 
                     header ul {
@@ -149,8 +150,8 @@ class Header extends Component {
                     .logo {
                         position: absolute;
                         z-index: 10;
-                        width: 60px;
-                        top: 10px;
+                        height:46px;
+                        top: 7px;
                         left: 15px;
                     }
 

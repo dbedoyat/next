@@ -32,7 +32,7 @@ export default ({ children, title = 'David Bedoya - UI Designer' }) => (
             <meta name="keywords" itemProp="keywords" content="design,develop,react,nodejs,web,html,css,jquery,wordpress,diseño,responsive,mobile" />
             <meta name="description" itemProp="description" content="my own page" />
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-            <meta name="theme-color" content="#000000" />
+            <meta name="theme-color" content="#363757" />
             <link rel="shortcut icon" type="image/png" href="../static/img/icon.png" />
         </Head>
      

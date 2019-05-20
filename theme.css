@@ -3,12 +3,14 @@
 
 
 :root {
-    --primary:#9575CD;
-    --secondary:#82bc00;
+    --primary:#363757;
+    --secondary:#00BCAF;
     --success: #28a745;
     --danger: #dc3545;
     --dark:#646464;
     --dark2:#333;
+
+    --shadow: 0 2px 20px 0 rgba(0,0,0,0.2);
 }     
 
 body{
@@ -147,6 +149,7 @@ button.slick-arrow{
 }
 #nprogress .bar{
     background:var(--secondary) !important;
+    height:2px;
 }
 
 /* Portfolio fix */
