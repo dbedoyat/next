@@ -41,6 +41,12 @@ class Header extends Component {
                                     <a href="">About</a>
                                 </Link>
                             </li>
+
+                            <li>
+                                <Link activeClassName='active' href="mailto:dbedoyat@gmail.com">
+                                    <a href="mailto:dbedoyat@gmail.com">Email me</a>
+                                </Link>
+                            </li>
                          
                         </ul>
                     </nav>
@@ -258,6 +264,7 @@ class Header extends Component {
                     nav.menu li a{
                         color: #fff;
                         font-size: 20px;
+                        text-align: left;
                     }
 
                     nav.menu li{

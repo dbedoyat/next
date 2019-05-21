@@ -19,7 +19,7 @@ class BlogPost extends Component {
     return (
       <Layout>
         <Head>
-          <title>David Bedoya - {this.props.title.rendered}</title>
+          <title>David Bedoya - Portfolio: {this.props.title.rendered}</title>
           <meta charSet='utf-8' />
 					<meta name="description" itemProp="description" content={`David Bedoya - Portfolio: ${this.props.title.rendered}`}/>
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
