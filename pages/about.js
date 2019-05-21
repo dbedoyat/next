@@ -30,12 +30,14 @@ class Contacto extends Component {
                         
                             <br />
                             <br />
+                            <div className="link-content">
+                                <a className="cta mr-3 secondary email" href="mailto:dbedoyat@gmail.com">Email me <FaPaperPlane /></a>
 
-                            <a className="cta mr-3 secondary" href="mailto:dbedoyat@gmail.com">Email me <FaPaperPlane /></a>
+                                <a className="cta mr-3" target="_blank" href="/static/files/resume-david-bedoya.pdf">Resume <FaCloudDownloadAlt />  </a>
 
-                            <a className="cta mr-3" target="_blank" href="static/files/resume-david-bedoya.pdf">Resume <FaCloudDownloadAlt />  </a>
+                                <a className="cta mr-3" target="_blank" href="https://www.linkedin.com/in/dbedoyat">LinkedIn <FaLinkedin /> </a>
 
-                            <a className="cta mr-3" target="_blank" href="https://www.linkedin.com/in/dbedoyat">LinkedIn <FaLinkedin /> </a>
+                            </div>
                             <br />
                             <br />
 
@@ -91,6 +93,14 @@ class Contacto extends Component {
                         height:120px;
                     
 
+                    }
+
+                    .link-content{
+                        text-align:center;
+                    }
+
+                    .email{
+                        margin-bottom:30px;
                     }
                 }
 
