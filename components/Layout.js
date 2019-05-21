@@ -37,11 +37,12 @@ export default class Layout extends React.Component {
 
         <Head>
             <title>{title}</title>
-            <meta name="google-site-verification" content="FyuiPsN__hVWmh351u9RX4Ocf25NpubqxgL_ehM8ZvA" />
+            
             <meta charSet='utf-8' />
             <meta name="keywords" itemProp="keywords" content="design,develop,react,nodejs,web,html,css,jquery,wordpress,diseño,responsive,mobile" />
-            <meta name="description" itemProp="description" content="my own page" />
+            <meta name="description" itemProp="description" content="Hello! I'm David Bedoya. Enjoy working with Front-End Dev " />
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+            <meta name="google-site-verification" content="FyuiPsN__hVWmh351u9RX4Ocf25NpubqxgL_ehM8ZvA" />
             <meta name="theme-color" content="#363757" />
             <link rel="shortcut icon" type="image/png" href="../static/img/icon.png" />
         </Head>
