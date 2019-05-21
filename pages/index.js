@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
-
+import { FaAngleRight} from 'react-icons/fa';
 
 class Index extends Component {
 
@@ -35,7 +35,7 @@ class Index extends Component {
 							</h3>
 							<div className="link">
 							<Link activeClassName='active' href="/about">
-								<a className="cta" href="">About me ></a>
+								<a className="cta" href="">About me <FaAngleRight /></a>
 							</Link>
 
 							</div>
@@ -104,15 +104,7 @@ class Index extends Component {
 						font-size:70%;
 					}
 
-					#hero .cta{
-						background:var(--primary);
-						padding:8px 16px;
-						color:#fff;
-						font-weight:600;
-						transition:all 300ms ease;
-						opacity:1;
-						
-					}
+					
 
 					#hero .cta:hover{
 						transition:all 300ms ease;

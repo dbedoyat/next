@@ -25,6 +25,11 @@ body{
     font-size: 16px;
     font-display: auto;
 }
+
+a {
+    color: var(--secondary);
+    font-weight: 600;
+}
 :focus{
     outline: none !important;
 }
@@ -177,7 +182,6 @@ button.slick-arrow{
 }
 
 .card {
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
     border: 0;
     transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
     transition-delay: .1s;
@@ -207,4 +211,54 @@ footer .social svg{
     width: 28px;
     height: 28px;
 
+}
+
+.cta {
+    background: var(--primary);
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 200ms ease;
+    opacity: 1;
+    border-radius: 33px;
+    text-align: center;
+    transform:translateY(0px);
+    display: inline-block;
+}
+
+.cta.secondary{
+    background:var(--secondary);
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 200ms ease;
+    opacity: 1;
+    border-radius: 33px;
+    text-align: center;
+    transform:translateY(0px);
+    display: inline-block;
+    
+}
+
+.cta:hover, 
+.cta.secondary:hover{
+    color:#fff;
+    transition: all 200ms ease;
+    transform:translateY(-2px);
+    opacity: 0.8;
+}
+
+
+.cta > svg {
+    transform: translateY(-1px);
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    transition: all 200ms ease;
+}
+
+.cta:hover > svg , 
+.cta.secondary:hover > svg {
+    transition: all 200ms ease;
+    transform: translate(3px, -1px);
 }

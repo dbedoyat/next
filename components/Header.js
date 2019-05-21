@@ -25,7 +25,7 @@ class Header extends Component {
                     <div className="content-logo">
                         <Link activeClassName='active' href="/">
                             <a href="">
-                                <img className="logo" src="../static/img/icon-dbedoyat.svg" alt=""/>                          
+                                <img className="logo" src="/static/img/icon-dbedoyat.svg" alt=""/>                          
                             </a>
                         </Link>
                     </div>
@@ -41,11 +41,7 @@ class Header extends Component {
                                     <a href="">About</a>
                                 </Link>
                             </li>
-                            <li>
-                                <Link activeClassName='active' href="/contact">
-                                    <a href="">Contact</a>
-                                </Link>
-                            </li>
+                         
                         </ul>
                     </nav>
                 </div>
@@ -117,15 +113,16 @@ class Header extends Component {
                     .content-logo{
                         width: 220px;
                         float:left;
-                        padding: 10px;
+
+                        padding: 0;
                     }
                     .logo{
                         position: relative;
                         z-index: 10;
                         width: inherit;
                         left: inherit;
-                        top: 5px;
-                        height: 20px;
+                        height:46px;
+                        top: 7px;
 
                     }
 
@@ -136,9 +133,11 @@ class Header extends Component {
                         padding-top: 5px;
                     }
                     nav{
-                        width:calc(100% - 360px);
-                        float:left;
+                        width: calc(100% - 220px);
+                        float: left;
                         padding: 13px 15px;
+                        text-align: right;
+                    }
                         
                     }
                     .nav-btn{
