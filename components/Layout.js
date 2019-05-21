@@ -5,12 +5,21 @@ import Footer from './Footer';
 import GoogleFontLoader from 'react-google-font-loader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../theme.css';
+import { initGA, logPageView } from '../utils/analytics.js'
 
+export default class Layout extends React.Component {
+    componentDidMount () {
+        if (!window.GA_INITIALIZED) {
+          initGA()
+          window.GA_INITIALIZED = true
+        }
+        logPageView()
+      }
 
-    
-
-export default ({ children, title = 'David Bedoya - Web Designer' }) => (
-    <div>
+    render() {
+      const { children, title = 'David Bedoya - Web Designer' } = this.props;
+      return (
+        <div>
 
     <GoogleFontLoader
             fonts={[
@@ -90,7 +99,6 @@ export default ({ children, title = 'David Bedoya - Web Designer' }) => (
       
     </div>
 
-
-
-)
-
+      );
+    }
+  }

@@ -23,7 +23,7 @@ class Header extends Component {
                         <span className="line3"></span>
                     </button>
                     <div className="content-logo">
-                        <Link activeClassName='active' href="/">
+                        <Link href="/">
                             <a href="">
                                 <img className="logo" src="/static/img/icon-dbedoyat.svg" alt=""/>                          
                             </a>
@@ -43,7 +43,7 @@ class Header extends Component {
                             </li>
 
                             <li>
-                                <Link activeClassName='active' href="mailto:dbedoyat@gmail.com">
+                                <Link href="mailto:dbedoyat@gmail.com">
                                     <a href="mailto:dbedoyat@gmail.com">Email me</a>
                                 </Link>
                             </li>

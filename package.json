@@ -19,6 +19,7 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-final-form": "^4.1.0",
+    "react-ga": "^2.5.7",
     "react-google-font-loader": "^1.0.5",
     "react-icons": "^3.7.0",
     "react-slick": "^0.24.0",
