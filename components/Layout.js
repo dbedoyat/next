@@ -9,7 +9,7 @@ import '../theme.css';
 
     
 
-export default ({ children, title = 'David Bedoya - UI Designer' }) => (
+export default ({ children, title = 'David Bedoya - Web Designer' }) => (
     <div>
 
     <GoogleFontLoader
