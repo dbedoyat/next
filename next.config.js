@@ -42,6 +42,7 @@ module.exports = withCSS({
             '/': { page: '/' },
             '/contact': { page: '/contact' },
             '/portfolio': { page: '/portfolio' },
+            '/about': { page: '/about' }
         });
 
         
