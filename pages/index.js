@@ -19,7 +19,7 @@ class Index extends Component {
 
 	render() {
 		const { portfolio } = this.props;
-	
+
 		return (
 
 			<Layout>

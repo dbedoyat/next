@@ -51,6 +51,7 @@ class BlogPost extends Component {
 			</div>
 		</div>
         <style jsx>{`
+					
 						
 			#hero-post {
           	width: 100%;
