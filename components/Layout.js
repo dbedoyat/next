@@ -41,10 +41,31 @@ export default class Layout extends React.Component {
             <meta charSet='utf-8' />
             <meta name="keywords" itemProp="keywords" content="design,develop,react,nodejs,web,html,css,jquery,wordpress,diseño,responsive,mobile" />
             <meta name="description" itemProp="description" content="Hello! I'm David Bedoya. Enjoy working with Front-End Dev " />
+
+
+
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://dbedoyat.now.sh/" />
+            <meta property="og:title" content="David Bedoya - Web Designer" />
+            <meta property="og:description" content="Hello! I'm David Bedoya. Enjoy working with Front-End Dev " />
+            <meta property="og:image" content="../static/img/dbedoyat-cover.png" />
+
+                            
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://dbedoyat.now.sh/" />
+            <meta property="twitter:title" content="David Bedoya - Web Designer" />
+            <meta property="twitter:description" content="Hello! I'm David Bedoya. Enjoy working with Front-End Dev " />
+            <meta property="twitter:image" content="../static/img/dbedoyat-cover.png" />
+              
+
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-            <meta name="google-site-verification" content="FyuiPsN__hVWmh351u9RX4Ocf25NpubqxgL_ehM8ZvA" />
+            <meta name="google-site-verification" content="FyuiPsN__hVWmh351u9RX4Ocf25NpubqxgL_e
+        hM8ZvA" />
             <meta name="theme-color" content="#363757" />
+
+                
             <link rel="shortcut icon" type="image/png" href="../static/img/icon.png" />
+
         </Head>
      
         <Header />
