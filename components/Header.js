@@ -17,7 +17,7 @@ class Header extends Component {
             
             <header>
                 <div className="container-fluid fix">
-                    <button role="button" className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
+                    <button aria-label="menu" role="button" className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
                         <span className="line1"></span>
                         <span className="line2"></span>
                         <span className="line3"></span>

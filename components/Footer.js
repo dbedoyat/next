@@ -18,17 +18,17 @@ class Footer extends Component {
                         </div>
                         <div className="divSocial col-md-6 col-12">
                             <div className="social">
-                            <a href="https://codepen.io/dongato" target="_blank" aria-label="codepen">
+                                <a href="https://codepen.io/dongato" rel="noopener" target="_blank" aria-label="codepen">
                                 <FaCodepen />
                             </a>
                             </div>
                             <div className="social">
-                                <a href="https://www.linkedin.com/in/dbedoyat" target="_blank" aria-label="linkedIn">
+                                <a href="https://www.linkedin.com/in/dbedoyat" rel="noopener" target="_blank" aria-label="linkedIn">
                                     <FaLinkedin />
                                 </a>
                             </div>
                             <div className="social">
-                                <a href="https://instagram.com/david.frontend" target="_blank" aria-label="instagram">
+                                <a href="https://instagram.com/david.frontend" rel="noopener" target="_blank" aria-label="instagram">
                                     <FaInstagram />
                                 </a>
                             </div>
