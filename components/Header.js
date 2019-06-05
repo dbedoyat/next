@@ -24,7 +24,7 @@ class Header extends Component {
                     </button>
                     <div className="content-logo">
                         <Link href="/">
-                            <a href="">
+                            <a href="" aria-label="Logo David Bedoya">
                                 <img className="logo" src="/static/img/icon-dbedoyat.svg" alt=""/>                          
                             </a>
                         </Link>
