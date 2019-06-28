@@ -16,10 +16,10 @@
     "next-routes": "^1.4.2",
     "nodemailer": "^6.1.1",
     "nprogress": "^0.2.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-final-form": "^4.1.0",
-    "react-ga": "^2.5.7",
+    "react-ga": "^2.6.0",
     "react-google-font-loader": "^1.0.5",
     "react-icons": "^3.7.0",
     "react-slick": "^0.24.0",
@@ -34,7 +34,7 @@
     "dev": "node server.js",
     "build": "next build && next export",
     "start": "NODE_ENV=production node server.js",
-    "now-build": "next build && next export -o dist"
+    "now-build": "next build"
   },
   "keywords": [
     "nextjs",
