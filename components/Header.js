@@ -17,14 +17,14 @@ class Header extends Component {
             
             <header>
                 <div className="container-fluid fix">
-                    <button role="button" className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
+                    <button aria-label="menu" role="button" className={`nav-btn ${menutoggle}`} onClick={this.toggleMenu}>
                         <span className="line1"></span>
                         <span className="line2"></span>
                         <span className="line3"></span>
                     </button>
                     <div className="content-logo">
                         <Link href="/">
-                            <a href="">
+                            <a href="" aria-label="Logo David Bedoya">
                                 <img className="logo" src="/static/img/icon-dbedoyat.svg" alt=""/>                          
                             </a>
                         </Link>

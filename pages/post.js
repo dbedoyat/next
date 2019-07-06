@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 
 
-class BlogPost extends Component {
+class portafolio extends Component {
   static async getInitialProps({ query }) {
     const slug = query.slug
     const response = await fetch(`https://dbedoyat.000webhostapp.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
@@ -115,4 +115,4 @@ class BlogPost extends Component {
   }
 }
 
-export default BlogPost;
+export default portafolio;

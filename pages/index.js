@@ -61,7 +61,7 @@ class Index extends Component {
 											slug: post.slug,
 										},
 									}}
-									as={`/post/${post.slug}`}
+									as={`/portfolio/${post.slug}`}
 								>
 									<a>
 										<div className="img-content">
