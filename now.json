@@ -7,7 +7,11 @@
             "use": "@now/next"
         },
         {
-            "src": "mail.php",
+            "src": "/api/mail.php",
+            "use": "@now/php"
+        },
+        {
+            "src": "/api/phpinfo.php",
             "use": "@now/php"
         }
     
