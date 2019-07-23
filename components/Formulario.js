@@ -15,7 +15,7 @@ class Formulario extends React.Component {
             </form>
 
             </div>
-           
+
         );
     }
 }
