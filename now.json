@@ -5,7 +5,12 @@
         {
             "src": "next.config.js",
             "use": "@now/next"
+        },
+        {
+            "src": "./api/mail.php",
+            "use": "@now/php"
         }
+    
     ],
     "routes": [
         {
