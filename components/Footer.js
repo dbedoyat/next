@@ -13,12 +13,11 @@ class Footer extends Component {
                     <div className="row align-items-center">
                     
                         <div className="col-md-6 col-12 name">
-                            <h3>David Bedoya</h3>
-                            <p>Web Designer</p>
+                    
                         </div>
                         <div className="divSocial col-md-6 col-12">
                             <div className="social">
-                                <a href="https://codepen.io/dongato" rel="noopener" target="_blank" aria-label="codepen">
+                                <a href="https://codepen.io/dbedoyat" rel="noopener" target="_blank" aria-label="codepen">
                                 <FaCodepen />
                             </a>
                             </div>

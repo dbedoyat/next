@@ -3,17 +3,23 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import GoogleFontLoader from 'react-google-font-loader';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'normalize.css/normalize.css';
 import '../theme.css';
 import { initGA, logPageView } from '../utils/analytics.js'
 
 export default class Layout extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     componentDidMount () {
         if (!window.GA_INITIALIZED) {
           initGA()
           window.GA_INITIALIZED = true
         }
         logPageView()
+        window.prismic = {
+            endpoint: 'https://dbedoyat.cdn.prismic.io/api/v2'
+        };
       }
 
     render() {
@@ -24,11 +30,7 @@ export default class Layout extends React.Component {
     <GoogleFontLoader
             fonts={[
             {
-                font: 'Roboto Slab',
-                weights: [400, 700],
-            },
-            {
-                font: 'Open Sans',
+                font: 'Nunito',
                 weights: [400, 600, 700],
             }
             ]}

@@ -3,22 +3,22 @@
 
 
 :root {
-    --primary:#363757;
-    --secondary:#00BCAF;
-    --success: #28a745;
+    --primary:#353E4A;
+    --secondary:#04D0D9;
+    --success: #94CB34;
     --danger: #dc3545;
     --dark:#646464;
     --dark2:#333;
-
     --shadow: 0 2px 20px 0 rgba(0,0,0,0.2);
 }     
 
 body{
-    font-family: "Open Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-family: "Nunito", sans-serif;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-feature-settings: "kern","liga","clig","calt";
+    -webkit-font-smoothing: antialiased;
     background-color:#fff;
     margin: 0;
     color:#404040;
@@ -36,7 +36,7 @@ a {
 .page-content {
     margin-top: 60px;
 }
-a:hover{
+a:hover, a{
     text-decoration:none;
 }
 p{
@@ -45,10 +45,12 @@ p{
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color:#303030;
-   font-family: 'Roboto Slab', serif;
+   font-family: 'Nunito', serif;
 }
 .container-fluid.fix{
-    max-width: 1140px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 15px ;
 }
 
 .card .marca {
@@ -58,7 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 180px;
     height: 29px !important;
 }
-
+.text-center{
+    text-align: center;
+}
 /** Buttons **/
 .btn {
     display: inline-block;

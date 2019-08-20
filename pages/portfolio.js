@@ -36,9 +36,7 @@ class Index extends Component {
 									as={`/portfolio/${post.slug}`}
 								>
 									<a>
-										<div className="img-content">
-											<img className="img-fluid" src={post._embedded['wp:featuredmedia'][0].source_url} alt={post._embedded['wp:featuredmedia'][0].alt_text} />
-										</div>
+										
 										<h4 className="titlePort pl-3 pr-3 mt-2 mb-2"  dangerouslySetInnerHTML={{ __html: post.title.rendered }}>
 										
 										</h4>
