@@ -29,6 +29,17 @@ export default class BlogPost extends Component {
                         {RichText.render(post.body, linkResolver)}
                     </article>
                 </div>
+                <style jsx>{`
+                    header nav{
+                        display:none
+
+                    }
+      
+
+
+                   
+                `}</style>
+
             </Layout>
         );
     }
