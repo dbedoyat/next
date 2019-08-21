@@ -30,9 +30,9 @@ class Header extends Component {
                             </li>
 
                             <li>
-                                <Link href="mailto:dbedoyat@gmail.com">
+                               
                                     <a href="mailto:dbedoyat@gmail.com">Email me</a>
-                                </Link>
+                              
                             </li>
                          
                         </ul>
@@ -45,7 +45,7 @@ class Header extends Component {
                         width: 100%;
                         top: 0;
                         position: fixed;
-                        height:60px;
+                        height:50px;
                         z-index: 100;
 
                     }

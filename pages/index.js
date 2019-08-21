@@ -18,8 +18,21 @@ import { linkResolver } from '../helpers';
 								as={linkResolver(post)}
 								href={`/blogPost?slug=${post.uid}`}
 								passHref
-							>
-								<a>{post.data.title[0].text}</a>
+							>	
+								
+								<a>
+
+									<div className="img-content">
+										<img src={post.data.image.url} alt="" />
+									</div>
+										
+								
+								
+								{post.data.title[0].text}
+								
+								
+								
+								</a>
 							</Link>
 							</div>
 						</div>
@@ -49,15 +62,19 @@ import { linkResolver } from '../helpers';
 					}
 
 						.box {
-							background-color: #eee;
+						    background-color: transparent;
 							color: var(--dark);
 							border-radius: 7px;
-							padding: 20px;
+							padding: 0;
 							min-height: 200px;
 							font-size: 24px;
 							font-weight: 700;
 							grid-column: auto;
 							grid-row: auto;
+						}
+
+						.img-content img{
+							max-width:100%;
 						}
 
 

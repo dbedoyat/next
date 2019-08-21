@@ -22,17 +22,21 @@ export default class BlogPost extends Component {
         const post = this.props.post.data;
         return (
             <Layout>
+                <div id="hero" style={{ backgroundColor: post.primarycolor}}>
+
+                </div>
                 <div className="container-fluid fix">
                     <article>
                         <h1>{post.title.length ? post.title[0].text : ''}</h1>
+                        <img src={post.title.length ? post.image.url : ''} alt=""/>
                         {/* Here we pass our rich text field to Prismics RichText renderer, along with our linkResolver */}
                         {RichText.render(post.body, linkResolver)}
                     </article>
                 </div>
                 <style jsx>{`
-                    header nav{
-                        display:none
-
+                    #hero{
+                        height: 250px;
+                        width: 100%;
                     }
       
 
