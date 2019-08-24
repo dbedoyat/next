@@ -22,8 +22,8 @@ export default class BlogPost extends Component {
         const post = this.props.post.data;
         return (
             <Layout>
-                <div id="hero" style={{ backgroundColor: post.primarycolor}}>
-
+                <div id="hero" style={{
+                    backgroundImage:`url(${post.image.url} )`}}>
                 </div>
                 <div className="container-fluid fix">
                     <article>
@@ -37,9 +37,27 @@ export default class BlogPost extends Component {
                     #hero{
                         height: 250px;
                         width: 100%;
-                    }
-      
+                        background-repeat:no-repeat;
+                        background-size:cover;
+                        background-position:50% 50%;
 
+                    }
+                    #hero::before {
+                        content: "";
+                        width: 100%;
+                        height: 250px;
+                        position: absolute;
+                        z-index: 1;
+                        background: rgba(0, 0, 0, 0.5);
+                    }
+
+                   article {
+                        width: 100%;
+                        max-width: 800px;
+                        line-height: 1.8;
+                        font-size: 20px;
+                        margin: 0 auto;
+                    }
 
                    
                 `}</style>

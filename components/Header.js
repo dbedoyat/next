@@ -1,53 +1,47 @@
 import React, { Component } from 'react'
 import Link from './Link';
 
-class Header extends Component {
 
+class Header extends Component {
+    randomColor = () => {
+        const color = "#" + Math.random().toString(16).slice(2, 8).toUpperCase();
+
+        console.log(color)
+    }
     render() {
         return (
             
             <header>
-                <div className="container-fluid fix">
-                   
+                <div className="container-fluid fix text-center">
+                    <button className="about">
+                       <img src="/static/img/user.svg" alt=""/>
+                    </button>
+
                     <div className="content-logo">
                         <Link href="/">
                             <a href="" aria-label="Logo David Bedoya">
-                                Some<span>Text</span>                       
+                                DAVID <span>BEDOYA</span>                       
                             </a>
                         </Link>
                     </div>
-                    <nav className="menu">
-                        <ul>
-                            <li>
-                                <Link activeClassName='active' href="/portfolio">
-                                    <a href="">Work</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link activeClassName='active' href="/about">
-                                    <a href="">About</a>
-                                </Link>
-                            </li>
+                    <button className="contact">
+                        <img src="/static/img/user.svg" alt="" />
+                    </button>
 
-                            <li>
-                               
-                                    <a href="mailto:dbedoyat@gmail.com">Email me</a>
-                              
-                            </li>
-                         
-                        </ul>
-                    </nav>
                 </div>
                 <style jsx>{`
                     header{
                         background: #fff;
-                        display: inline-block;
                         width: 100%;
                         top: 0;
-                        position: fixed;
-                        height:50px;
+                        height:60px;
                         z-index: 100;
-
+                        position:fixed;
+                        left:0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
 
                     header ul {
@@ -56,60 +50,47 @@ class Header extends Component {
                         list-style: none;
                     }
 
-                    header ul li {
+                     header .container-fluid.fix {
+                    
                         display: inline-block;
-                        margin: 0px;
-                    }
-                    header li a{
-                        color: var(--dark);
-                        padding: 4px 14px;
-                        font-weight: 600;
-                        font-size:16px;
-                        display: block;
-                        overflow:hidden;
-                    }
-                    header li a.active{
-                        color:   var(--secondary);
-                    }
-                     header li a:hover{
-                        color: var(--primary);
+                        padding: 0;
                     }
 
-                   
-               
+                    header .about{
+                        float: left;
+                        background: transparent;
+                        border: 0;
+                    }
 
-
+                    .about img,
+                    .contact img{
+                        width:32px;
+                        height:32px;
+                    }
+                    header .contact{
+                        float:right;
+                         background: transparent;
+                        border: 0;
+                    }
 
                     .content-logo{
-                        top: 10px;
-                        width: auto;
-                        float: left;
+                        display: initial;
+                       width: auto;
+                        float: none;
                         padding: 0;
-                        position: relative;
+
                     }
+
+
                 
                     .content-logo > a {
-                        color: var(--primary);
-                        font-weight: 700;
+                        color:#000;
+                        font-weight: 600;
                         font-size: 24px;
                         display: inline-flex;
                     }
-                    .content-logo > a > span {
-                        color: var(--secondary);
-                        width: auto;
-                        float: left;
-                        padding: 0;
-                        position: relative;
-                    }
-
+                  
      
-                    nav{
-                        width: auto;
-                        float: left;
-                        padding: 13px 15px;
-                        text-align: left;
-                    }
-                           
 
              
 
