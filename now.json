@@ -5,21 +5,13 @@
         {
             "src": "next.config.js",
             "use": "@now/next"
-        },
-        {
-            "src": "/api/mail.php",
-            "use": "@now/php"
-        },
-        {
-            "src": "/api/phpinfo.php",
-            "use": "@now/php"
         }
-    
     ],
+
     "routes": [
         {
-            "src": "/portfolio/(?<slug>.+)",
-            "dest": "/post?slug=$slug"
+            "src": "/work/(?<uid>.+)",
+            "dest": "/post?uid=$uid"
         }
     ]
 }
