@@ -30,7 +30,7 @@ export default class Layout extends React.Component {
     <GoogleFontLoader
             fonts={[
             {
-                font: 'Nunito',
+                font: 'Montserrat',
                 weights: [400, 600, 700],
             }
             ]}

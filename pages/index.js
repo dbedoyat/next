@@ -9,39 +9,36 @@ import { linkResolver } from '../helpers';
 	const Index = ({ posts = [] }) => (
 
 			<Layout>
-
-				<section id="work" className="text-center">
-			
-					<div className="grid">
-						{posts.map((post, index) => (
-							<div key={index}>
-								<div className="box">
+			<section id="work" className="text-center">
+				
+				
+				<div className="grid">
+					{posts.map((post, index) => (
+				
+							<div key={index} className="grid_item">
 								<Link
 									as={linkResolver(post)}
 									href={`/blogPost?slug=${post.uid}`}
-									passHref
-								>	
+									passHref>
 									<a>
 
-										<div className="img-content">
-											<img src={post.data.image.url} alt="" />
-										</div>				
-									
-											{post.data.title[0].text}
+										<div className="img-content" alt={post.data.title[0].text} >
+										<img src={post.data.image.url}  alt=""/>
+										</div>
+
 									</a>
 								</Link>
-								</div>
 							</div>
-						))}
+	
+					))}
 
-					</div>
 				
-				</section>
+			
+				</div>
+			
+			</section>
 
-				<section id="info">
-
-
-				</section>
+	
 					<style jsx>{`
 						#work{
 							padding:16px;
@@ -68,9 +65,10 @@ import { linkResolver } from '../helpers';
 								grid-column: auto;
 								grid-row: auto;
 							}
-
-							.img-content img{
-								max-width:100%;
+							.grid_item{
+								grid-column: 1 !important;
+								grid-row: auto !important;
+   								height: 300px !important;
 							}
 
 

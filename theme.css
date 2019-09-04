@@ -3,17 +3,23 @@
 
 
 :root {
-    --primary:#353E4A;
-    --secondary:#04D0D9;
+    --primary:#94CB34;
+    --secondary:#04d0d9;
     --success: #94CB34;
-    --danger: #dc3545;
+    --danger: #E15A54;
     --dark:#646464;
     --dark2:#333;
     --shadow: 0 2px 20px 0 rgba(0,0,0,0.2);
+
+    --grid1:#9BD6C4;
+    --grid2:#F38D8B;
+    --grid3:#DDE8A4;
+    --grid4:#CAF1DE;
+    --grid5:#FFE8BE;
 }     
 
 body{
-    font-family: "Nunito", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
@@ -25,7 +31,9 @@ body{
     font-size: 16px;
     font-display: auto;
 }
-
+.page-content{
+    margin-top:60px;
+}
 a {
     color: var(--secondary);
     font-weight: 600;
@@ -45,12 +53,14 @@ p{
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color:#303030;
-   font-family: 'Nunito', serif;
 }
+
+
 .container-fluid.fix{
     max-width: 1200px;
     margin: 0 auto;
-    padding:0 15px ;
+    padding: 0 15px;
+    width: 100%;
 }
 
 .card .marca {
