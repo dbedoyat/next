@@ -5,6 +5,14 @@ function linkResolver(doc) {
     return '/';
 }
 
+function hrefResolver(doc) {
+    if (doc.type === 'first-blog') {
+        return `/blogPost?uid=${doc.uid}`
+    }
+    return '/'
+}
+
 module.exports = {
-    linkResolver
+    linkResolver,
+    hrefResolver
 };

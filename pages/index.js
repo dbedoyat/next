@@ -30,7 +30,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 									<div className="grid_item">
 									<Link
 										as={linkResolver(post)}
-										href={`/blogPost?slug=${post.uid}`}
+										href={hrefResolver(post)}
 										passHref>
 										<a>
 											<div className="text-content content-pc">
@@ -133,7 +133,8 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 
 							.text-content h1 {
 								font-size: 42px;
-								margin:0
+								margin:0;
+								    margin-bottom: 20px;
 							}
 							.text-content p {
 								font-size: 24px;
