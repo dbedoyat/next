@@ -6,8 +6,7 @@ import { getBlogPostAPI } from '../api';
 import linkResolver from '../helpers';
 // Here we are reusing our layout again
 import Layout from '../components/Layout';
-import '../node_modules/aos/dist/aos.css';
-import AOS from 'aos'; 
+
 
 export default class BlogPost extends Component {
     static async getInitialProps(context) {
@@ -18,11 +17,7 @@ export default class BlogPost extends Component {
         };
     }
 
-    componentDidMount() {
-
-        AOS.init();
-
-    }
+   
     render() {
         const post = this.props.post.data;
         if (!this.props.post) {

@@ -5,12 +5,17 @@ import Footer from './Footer';
 import GoogleFontLoader from 'react-google-font-loader';
 import '../theme.css';
 import { initGA, logPageView } from '../utils/analytics.js'
+import '../node_modules/aos/dist/aos.css';
+import AOS from 'aos'; 
+
 
 export default class Layout extends React.Component {
     constructor(props) {
         super(props);
     }
     componentDidMount () {
+
+        AOS.init();
         if (!window.GA_INITIALIZED) {
           initGA()
           window.GA_INITIALIZED = true
@@ -19,8 +24,7 @@ export default class Layout extends React.Component {
         window.prismic = {
             endpoint: 'https://dbedoyat.cdn.prismic.io/api/v2'
         };
-      }
-
+    } 
     render() {
       const { children, title = 'app' } = this.props;
       return (

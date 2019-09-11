@@ -45,6 +45,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    left:0;
 }
 a {
     color: #505050;
