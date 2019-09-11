@@ -9,9 +9,9 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/work/:slug', (req, res) => {
+    server.get('/work/:uid', (req, res) => {
       const nextJsPage = '/blogPost';
-      const queryParams = { slug: req.params.slug };
+      const queryParams = { uid: req.params.uid };
       app.render(req, res, nextJsPage, queryParams);
     });
 

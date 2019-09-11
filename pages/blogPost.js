@@ -13,8 +13,8 @@ export default class BlogPost extends Component {
     static async getInitialProps(context) {
         // we get the slug of the post so that we can
         // query the API with it
-        const { slug } = context.query;
-        const response = await getBlogPostAPI(slug);
+        const { uid } = context.query;
+        const response = await getBlogPostAPI(uid);
         return {
             post: response
         };
