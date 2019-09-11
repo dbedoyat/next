@@ -11,10 +11,9 @@ app
 
     server.get('/work/:uid', (req, res) => {
       const nextJsPage = '/blogPost';
-      const queryParams = { uid: req.params.uid };
-      app.render(req, res, nextJsPage, queryParams);
+      const queryParams = { uid: req.params.uid }
+      app.render(req, res, nextJsPage, queryParams)
     });
-
 
     server.get('*', (req, res) => handle(req, res));
 

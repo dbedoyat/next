@@ -10,7 +10,7 @@
 
     "routes": [
         {
-            "src": "/item/(?<uid>[^/]+)$",
+            "src": "/work/(?<uid>[^/]+)$",
             "dest": "/blogPost?uid=$uid"
         }
     ]

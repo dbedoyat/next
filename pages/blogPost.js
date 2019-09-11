@@ -11,8 +11,6 @@ import AOS from 'aos';
 
 export default class BlogPost extends Component {
     static async getInitialProps(context) {
-        // we get the slug of the post so that we can
-        // query the API with it
         const { uid } = context.query;
         const response = await getBlogPostAPI(uid);
         return {
@@ -27,7 +25,11 @@ export default class BlogPost extends Component {
     }
     render() {
         const post = this.props.post.data;
-        return (
+        if (!this.props.post) {
+            return <div>404 Error!</div>
+        }
+        else {
+            return (
             <Layout>
     
                 <div className="container-fluid fix">
@@ -88,6 +90,7 @@ export default class BlogPost extends Component {
                 `}</style>
 
             </Layout>
-        );
+            );
+        }
     }
 }
