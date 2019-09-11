@@ -3,29 +3,25 @@ import Link from './Link';
 
 
 class Header extends Component {
-    randomColor = () => {
-        const color = "#" + Math.random().toString(16).slice(2, 8).toUpperCase();
-
-        console.log(color)
-    }
+  
     render() {
         return (
             
             <header>
                 <div className="container-fluid fix text-center">
                     <button className="about">
-                       <img src="/static/img/user.svg" alt=""/>
+                   
                     </button>
 
                     <div className="content-logo">
                         <Link href="/">
                             <a href="" aria-label="Logo David Bedoya">
-                                DAVID <span>BEDOYA</span>                       
+                                 H E L L O                                                        
                             </a>
                         </Link>
                     </div>
                     <button className="contact">
-                        <img src="/static/img/user.svg" alt="" />
+               
                     </button>
 
                 </div>
@@ -69,13 +65,13 @@ class Header extends Component {
                     }
                     header .contact{
                         float:right;
-                         background: transparent;
+                        background: transparent;
                         border: 0;
                     }
 
                     .content-logo{
                         display: initial;
-                       width: auto;
+                        width: auto;
                         float: none;
                         padding: 0;
 

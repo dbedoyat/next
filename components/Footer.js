@@ -45,7 +45,6 @@ class Footer extends Component {
                 
                 footer{
                     background:#000;
-                    font-family: "Open Sans", sans-serif;
                     padding:20px;
                    
 
@@ -64,6 +63,7 @@ class Footer extends Component {
                     display: inline-flex;
                     margin: 5px 15px;
                     width: auto;
+                    display:none;
                 }
 
                 footer .divSocial {

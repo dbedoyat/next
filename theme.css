@@ -32,10 +32,22 @@ body{
     font-display: auto;
 }
 .page-content{
-    margin-top:60px;
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+    display: block;
+    display: flex;
+}
+
+.parallaxItem{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 a {
-    color: var(--secondary);
+    color: #505050;
     font-weight: 600;
 }
 :focus{
@@ -54,6 +66,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color:#303030;
 }
+
+
 
 
 .container-fluid.fix{
@@ -103,15 +117,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px;
     border-radius: 10px;
 }
-/* Ajustes globales */
 
-header li > .dropdown{
-    color:#e8e8e8;
-    padding: 4px 14px;
-    font-weight: 600;
-    font-size:16px;
-    display: block;
-}
 
 /* Clases modificadas para wordpress */
 
@@ -275,4 +281,8 @@ footer .social svg{
 .cta.secondary:hover > svg {
     transition: all 200ms ease;
     transform: translate(3px, -1px);
+}
+
+@media only screen and (max-width : 520px) {
+
 }

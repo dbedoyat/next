@@ -12,7 +12,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="es">
+            <Html lang="en">
                 <Head>
                     <style>{`body { margin: 0 } /* custom! */`}</style>
                 </Head>

@@ -6,6 +6,8 @@ import { getBlogPostAPI } from '../api';
 import linkResolver from '../helpers';
 // Here we are reusing our layout again
 import Layout from '../components/Layout';
+import '../node_modules/aos/dist/aos.css';
+import AOS from 'aos'; 
 
 export default class BlogPost extends Component {
     static async getInitialProps(context) {
@@ -18,19 +20,36 @@ export default class BlogPost extends Component {
         };
     }
 
+    componentDidMount() {
+
+        AOS.init();
+
+    }
     render() {
         const post = this.props.post.data;
         return (
             <Layout>
-                <div id="hero" style={{
-                    backgroundImage:`url(${post.image.url} )`}}>
-                </div>
+    
                 <div className="container-fluid fix">
                     <article>
-                        <h1>{post.title.length ? post.title[0].text : ''}</h1>
-                        <img src={post.title.length ? post.image.url : ''} alt=""/>
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-duration="300"
+                            
+
+                        >{post.title.length ? post.title[0].text : ''}</h1>
+                        <img
+                            data-aos="zoom-in"
+                            data-aos-duration="300"
+                            data-aos-delay="200"
+                            src={post.title.length ? post.image.url : ''} alt={post.title.length ? post.title[0].text : ''} />
                         {/* Here we pass our rich text field to Prismics RichText renderer, along with our linkResolver */}
-                        {RichText.render(post.body, linkResolver)}
+                        
+                        <div data-aos="fade-up"
+                            data-aos-duration="300"
+                            data-aos-delay="400" className="content-text">
+                            {RichText.render(post.body, linkResolver)}
+                        </div>
                     </article>
                 </div>
                 <style jsx>{`
@@ -57,6 +76,12 @@ export default class BlogPost extends Component {
                         line-height: 1.8;
                         font-size: 20px;
                         margin: 0 auto;
+                        margin-top:60px;
+                    }
+
+                    article img{
+                        width:100%;
+                        max-width:100%;
                     }
 
                    

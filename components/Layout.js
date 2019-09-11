@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import GoogleFontLoader from 'react-google-font-loader';
-import 'normalize.css/normalize.css';
 import '../theme.css';
 import { initGA, logPageView } from '../utils/analytics.js'
 
@@ -23,7 +22,7 @@ export default class Layout extends React.Component {
       }
 
     render() {
-      const { children, title = 'David Bedoya - Web Designer' } = this.props;
+      const { children, title = 'app' } = this.props;
       return (
         <div>
 
@@ -63,7 +62,7 @@ export default class Layout extends React.Component {
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             <meta name="google-site-verification" content="FyuiPsN__hVWmh351u9RX4Ocf25NpubqxgL_e
         hM8ZvA" />
-            <meta name="theme-color" content="#363757" />
+            <meta name="theme-color" content="#000000" />
 
                 
             <link rel="shortcut icon" type="image/png" href="../static/img/icon.png" />
@@ -76,47 +75,15 @@ export default class Layout extends React.Component {
             
             {children}
         </div>
-        <Footer />
+
         <style jsx>{`
-            header{
-                background: #fff;
-                color: #000;
-                display: inline-block;
-                width: 100%;
-                top: 0;
-                position: fixed;
-                height:60px;
-                font-family: "Open Sans", sans-serif;
-                z-index: 100;
-            }
-            header a{
-                color:#fff;
-                padding: 10px; 
-            }
-            .logo{
-                width:200px;
-                padding:18px 15px; 
-                float:left;  
-            }
-            .nav{
-                width:calc(100% - 200px);
-                float:left;
-                padding:18px 15px; 
-                
-            }
+
             .page-content {
-                margin-top: 60px;
-                min-height:600px;
-                 font-family: "Open Sans", sans-serif;
+                margin-top: 0;
+                height: auto;
             }
 
-             footer {
-                background: #eee;
-                padding: 25px;
-                text-align: center;
-                color: #000;
-                font-family: "Open Sans", sans-serif;
-            }
+     
          
            
         `}</style>
