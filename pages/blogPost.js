@@ -20,6 +20,7 @@ export default class BlogPost extends Component {
    
     render() {
         const post = this.props.post.data;
+
         if (!this.props.post) {
             return <div>404 Error!</div>
         }
@@ -29,12 +30,12 @@ export default class BlogPost extends Component {
     
                 <div className="container-fluid fix">
                     <article>
-                        <h1
+                        <h3
                             data-aos="fade-up"
                             data-aos-duration="300"
                             
 
-                        >{post.title.length ? post.title[0].text : ''}</h1>
+                        >{post.title.length ? post.title[0].text : ''}</h3>
                         <img
                             data-aos="zoom-in"
                             data-aos-duration="300"
@@ -76,6 +77,9 @@ export default class BlogPost extends Component {
                         margin-top:60px;
                     }
 
+                    article h3{
+                        line-height:1.2;
+                    }
                     article img{
                         width:100%;
                         max-width:100%;
