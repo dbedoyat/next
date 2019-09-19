@@ -14,7 +14,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 				<section id="work" className="text-center">
 			 
  
-					<ParallaxLayer className="background" offset={0} speed={0.3} factor={8} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover', filter: 'brightness(0)', left: '0', backgroundRepeat: 'repeat', backgroundPosition: 'center top'}} />
+					<ParallaxLayer className="background" offset={0} speed={0.2} factor={8} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover', filter: 'brightness(0)', left: '0', backgroundRepeat: 'repeat', backgroundPosition: 'center top'}} />
 					<ParallaxLayer className="background" offset={0} speed={0.1} factor={8} style={{ backgroundImage: url('starsinverse', true), backgroundSize: 'cover', filter: 'brightness(0.6)', left: '0' , backgroundRepeat: 'repeat', backgroundPosition: 'center top'}} />
 						
 						{posts.map((post, index) => (
@@ -22,7 +22,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 								<ParallaxLayer
 									key={index} 
 									offset={`${index}`}
-									speed={0.5}
+									speed={0.3}
 									className="parallaxItem "
 										>
 
@@ -56,13 +56,15 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 										</a>
 									</Link>
 								</div>
-									</ParallaxLayer>
+								
+							</ParallaxLayer>
+
 							
 		
 						))}
 
 					
-				
+					<p className="end">THE END</p>
 			
 				
 			</section>
@@ -177,6 +179,29 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 							}
 							.content-mobile{
 								display:none;
+							}
+
+							.end{
+								position: absolute;
+								bottom: 0;
+								width: 100%;
+								font-weight: 700;
+								letter-spacing: 3px;
+								color:#707070;
+								background:#fff;
+								padding:5px;
+							}
+
+							.end:before{
+								width: calc(100% - 30px);
+								background:#707070;
+								height:2px;
+								content:'';
+
+							}
+
+							.end{
+								width: calc(100% - 30px);
 							}
 									
 							@media only screen and (max-width : 520px) {

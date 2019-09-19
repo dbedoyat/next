@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Link from './Link';
-
+import Link from 'next/link';
+import { FiUser, FiMail } from 'react-icons/fi';
 
 class Header extends Component {
   
@@ -10,27 +10,33 @@ class Header extends Component {
             <header>
                 <div className="container-fluid fix text-center">
                     <button className="about">
-                   
+                        <Link href="/about">
+                            <a href="" aria-label="About">
+                                <FiUser />
+                            </a>
+                        </Link>
                     </button>
 
                     <div className="content-logo">
                         <Link href="/">
                             <a href="" aria-label="Logo David Bedoya">
-                                 H E L L O                                                        
+                                 D A V I D    B E D O Y A                                                   
                             </a>
                         </Link>
                     </div>
                     <button className="contact">
-               
+                        <a href="mailto:dbedoyat@gmail.com" aria-label="About">
+                            <FiMail />
+                        </a>
                     </button>
 
                 </div>
                 <style jsx>{`
                     header{
-                        background: #fff;
+                        background: #000;
                         width: 100%;
                         top: 0;
-                        height:60px;
+                        height:50px;
                         z-index: 100;
                         position:fixed;
                         left:0;
@@ -54,26 +60,43 @@ class Header extends Component {
 
                     header .about{
                         float: left;
-                        background: transparent;
-                        border: 0;
+        
                     }
 
-                    .about img,
-                    .contact img{
-                        width:32px;
-                        height:32px;
+                    .about,
+                    .contact{
+                        font-size:28px;
+                        background: transparent;
+                        border: 0;
+                        width:50px;
+                        height:50px;
+                        padding:0;
+                        color:#fff !important;
+             
+                    }
+
+                     .about a,
+                    .contact a{
+                        color:#fff !important;
+                        width:50px;
+                        height:50px;
+                            display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                                
                     }
                     header .contact{
                         float:right;
-                        background: transparent;
-                        border: 0;
+                       
                     }
 
                     .content-logo{
                         display: initial;
-                        width: auto;
+                        width: calc(100% - 100px);
                         float: none;
                         padding: 0;
+                        height:50px;
 
                     }
 
@@ -81,10 +104,15 @@ class Header extends Component {
                 
                     .content-logo > a {
                         color:#000;
-                        font-weight: 600;
-                        font-size: 24px;
+                        background:#fff;
+                        padding:5px 10px;
+                        font-weight: 700;
+                        font-size: 20px;
                         display: inline-flex;
+                        margin-top:7px;
                     }
+
+                    
                   
      
 
