@@ -27,7 +27,11 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 										>
 
 						
-									<div className="grid_item">
+									<div className="grid_item"
+									data-aos="zoom-in"
+									data-aos-duration="300"
+									data-aos-delay="200"
+									>
 									<Link
 										as={linkResolver(post)}
 										href={hrefResolver(post)}
