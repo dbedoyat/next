@@ -6,8 +6,6 @@ import { linkResolver, hrefResolver } from '../helpers';
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 
 
-
-
 	const url = (name, wrap = false) => `${wrap ? 'url(' : ''}/static/img/${name}.svg${wrap ? ')' : ''}`
 	const Index = ({ posts = [] }) => (
 
@@ -23,9 +21,8 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 					
 								<ParallaxLayer
 									key={index} 
-									offset={0.2}
+									offset={`${index}`}
 									speed={0.5}
-								factor={1}
 									className="parallaxItem "
 										>
 
