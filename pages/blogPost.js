@@ -32,14 +32,16 @@ export default class BlogPost extends Component {
                     <article>
                         <h1
                             data-aos="fade-up"
-                            data-aos-duration="300"
-                            
+                            data-aos-duration="300">
+                            {post.title.length ? post.title[0].text : ''}
 
-                        >{post.title.length ? post.title[0].text : ''}</h1>
+                        </h1>
+
                         <br/>
-                            <span className="tags">{post.tags[0].textag}</span>
-                            <span className="tags">{post.tags[1].textag}</span>
-                            <span className="tags">{post.tags[2].textag}</span>
+                        <span className="tags">{post.tags[0].textag}</span>
+                        <span className="tags">{post.tags[1].textag}</span>
+                        <span className="tags">{post.tags[2].textag}</span>
+
                         <img className="mt-5 featured"
                             data-aos="zoom-in"
                             data-aos-duration="300"
@@ -120,6 +122,8 @@ export default class BlogPost extends Component {
                         transform: translateX(-50%);
                         box-shadow:0 3px 10px 0  rgba(0,0,0,0.12);
                         transition:ease all 300ms;
+                        text-align:center;
+                        
                     }
                      .gowebsite:hover {
                         background:#fff;
@@ -133,6 +137,14 @@ export default class BlogPost extends Component {
                     font-size: 14px;
                     border-radius: 40px;
                     font-weight: 600;
+                }
+
+                                
+                @media only screen and (max-width : 520px) {
+                    .gowebsite {
+                        width: calc(100% - 100px);
+                        text-align: center;
+                    }
                 }
 
                    

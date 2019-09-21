@@ -112,9 +112,16 @@ class Header extends Component {
                         margin-top:7px;
                     }
 
-                    
-                  
-     
+                            
+                    @media only screen and (max-width : 520px) {
+                
+                        .content-logo a{
+                           font-size: 16px;
+                           margin-top: 10px;
+                        }
+                          
+                    }    
+
 
              
 
