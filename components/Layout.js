@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
         };
     } 
     render() {
-      const { children, title = 'app' } = this.props;
+      const { children, title = 'David Bedoya - Web Designer' } = this.props;
       return (
         <div>
 

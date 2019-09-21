@@ -6,7 +6,7 @@ import { getBlogPostAPI } from '../api';
 import linkResolver from '../helpers';
 // Here we are reusing our layout again
 import Layout from '../components/Layout';
-
+import { FiExternalLink } from "react-icons/fi";
 
 export default class BlogPost extends Component {
     static async getInitialProps(context) {
@@ -36,7 +36,11 @@ export default class BlogPost extends Component {
                             
 
                         >{post.title.length ? post.title[0].text : ''}</h1>
-                        <img
+                        <br/>
+                            <span className="tags">{post.tags[0].textag}</span>
+                            <span className="tags">{post.tags[1].textag}</span>
+                            <span className="tags">{post.tags[2].textag}</span>
+                        <img className="mt-5 featured"
                             data-aos="zoom-in"
                             data-aos-duration="300"
                             data-aos-delay="200"
@@ -49,6 +53,12 @@ export default class BlogPost extends Component {
                             {RichText.render(post.body, linkResolver)}
                         </div>
                     </article>
+
+                   
+                        <a className={`gowebsite ${post.show_website} `} target="_blank" href={post.url_website.length ? post.url_website : ''}>
+                                Go to the website <FiExternalLink/>    
+                            </a>
+                   
                 </div>
                 <style jsx>{`
                     #hero{
@@ -80,11 +90,50 @@ export default class BlogPost extends Component {
                     article h1{
                         line-height:1.2;
                         display: inline-block;
+                        margin-bottom:5px
+                    }
+
+                    .featured{
+                        margin-top:30px;
                     }
                     article img{
                         width:100%;
                         max-width:100%;
                     }
+                    .gowebsite.no,
+                    .gowebsite{
+                        display:none;
+                    }
+                    .gowebsite.yes{
+                        display:block;
+                    }
+
+                    .gowebsite {
+                        width: auto;
+                        background: #000;
+                        padding: 12px 20px;
+                        color: #fff;
+                        border-radius: 23px;
+                        position: fixed;
+                        bottom: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        box-shadow:0 3px 10px 0  rgba(0,0,0,0.12);
+                        transition:ease all 300ms;
+                    }
+                     .gowebsite:hover {
+                        background:#fff;
+                        color:#000;
+                        transform: translateX(-50%);
+                        transition:ease all 300ms;
+                    }
+
+                  span.tags {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    border-radius: 40px;
+                    font-weight: 600;
+                }
 
                    
                 `}</style>
