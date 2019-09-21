@@ -107,7 +107,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 									
 							}
 							.grid_item{
-								max-width:800px;
+								max-width:1000px;
 								grid-column: 1 !important;
 								grid-row: auto !important;
 								height:300px;
@@ -124,14 +124,14 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 
 							.grid_item a{
 							
-								width: 800px;
+								width: 1000px;
 								max-width: 100%;
 								display: block;
 								margin: 0 auto;
 							}
 		
 							.text-content {
-								width: calc(100% - 430px); 
+								width: calc(100% - 630px); 
 								float: left;
 								text-align: left;
 								padding: 15px;
@@ -162,7 +162,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 								
 							}
 							.img-content {
-								width: 400px;
+								width: 600px;
 								margin: 0 auto;
 								float:left;
 								overflow: hidden;
@@ -192,21 +192,13 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 								font-weight: 700;
 								letter-spacing: 3px;
 								color:#707070;
-								background:#fff;
 								padding:5px;
+								left: 0;
+								z-index:0;
 							}
 
-							.end:before{
-								width: calc(100% - 30px);
-								background:#707070;
-								height:2px;
-								content:'';
 
-							}
-
-							.end{
-								width: calc(100% - 30px);
-							}
+						
 									
 							@media only screen and (max-width : 520px) {
 

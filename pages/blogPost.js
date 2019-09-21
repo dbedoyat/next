@@ -30,12 +30,12 @@ export default class BlogPost extends Component {
     
                 <div className="container-fluid fix">
                     <article>
-                        <h3
+                        <h1
                             data-aos="fade-up"
                             data-aos-duration="300"
                             
 
-                        >{post.title.length ? post.title[0].text : ''}</h3>
+                        >{post.title.length ? post.title[0].text : ''}</h1>
                         <img
                             data-aos="zoom-in"
                             data-aos-duration="300"
@@ -77,8 +77,9 @@ export default class BlogPost extends Component {
                         margin-top:60px;
                     }
 
-                    article h3{
+                    article h1{
                         line-height:1.2;
+                        display: inline-block;
                     }
                     article img{
                         width:100%;

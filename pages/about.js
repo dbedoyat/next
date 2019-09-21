@@ -40,7 +40,7 @@ class Contacto extends Component {
 							<br />
 							<br />
 							<hr />
-							<p>This site was build with React.js + Next.js + Wordpress API Rest and much love ❤ </p>
+							<p>This site was build with React.js + Next.js + Prismic API Rest with much love ❤ </p>
 							<br />
 							<br />
 						</div>
@@ -79,12 +79,13 @@ class Contacto extends Component {
                     height:auto;
                 }
 
-				.text-content{
+				.text-content {
 					width: 100%;
-					margin-top: 250px;
 					line-height: 1.6;
+					max-width: 800px;
+					margin: 0 auto;
+					margin-top: 320px;
 				}
-                
                 @media only screen and (max-width : 768px) {
                     
                     .hero-pic {
