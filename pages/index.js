@@ -186,7 +186,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 							z-index:0;
 						}
 		
-						@media only screen and (max-width : 520px) {
+						@media only screen and (max-width : 820px) {
 
 							.grid {
 								display: grid;
