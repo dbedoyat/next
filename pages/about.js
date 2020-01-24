@@ -34,7 +34,7 @@ class Contacto extends Component {
 							<br />
 							<div className="link-content">
 								<a className="cta  secondary email" href="mailto:dbedoyat@gmail.com">Email me <FaPaperPlane /></a>
-								<a className="cta  secondary " target="_blank" href="/static/files/resume-david-bedoya.pdf">Resume <FaCloudDownloadAlt />  </a>
+								<a className="cta  secondary " target="_blank" href="/static/files/resume-juan-david-bedoya.pdf">Resume <FaCloudDownloadAlt />  </a>
 								<a className="cta  secondary " target="_blank" href="https://www.linkedin.com/in/dbedoyat">LinkedIn <FaLinkedin /> </a>
 							</div>
 							<br />
